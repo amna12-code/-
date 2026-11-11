@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+
+<html lang="ar" dir="rtl">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>11:11 — A Special Day ❤️</title>
+
+<style>
+
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&family=Playfair+Display:ital,wght@1,600&display=swap');
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+}
+
+body {
+
+    min-height: 100vh;
+
+    background:
+
+    radial-gradient(ellipse at top, #58243d 0%, #24101f 45%, #100b17 100%);
+
+    color: white;
+
+    font-family: 'Cairo', sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow-x: hidden;
+
+}
+
+.stars {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+}
+
+.star {
+
+    position: absolute;
+
+    color: #ffd9e8;
+
+    animation: twinkle 3s infinite alternate;
+
+}
+
+@keyframes twinkle {
+
+    from {opacity: .2; transform: scale(.7);}
+
+    to {opacity: 1; transform: scale(1.3);}
+
+}
+
+.card {
+
+    width: 90%;
+
+    max-width: 440px;
+
+    padding: 40px 25px;
+
+    text-align: center;
+
+    border: 1px solid rgba(255,210,225,.3);
+
+    border-radius: 28px;
+
+    background: rgba(255,255,255,.055);
+
+    backdrop-filter: blur(18px);
+
+    box-shadow: 0 0 70px rgba(255,90,150,.15);
+
+    position: relative;
+
+    z-index: 2;
+
+    animation: appear 1.5s ease;
+
+}
+
+@keyframes appear {
+
+    from {opacity:0; transform: translateY(30px);}
+
+    to {opacity:1; transform: translateY(0);}
+
+}
+
+.small {
+
+    color: #f4b9ce;
+
+    letter-spacing: 4px;
+
+    font-size: 12px;
+
+    direction: ltr;
+
+}
+
+.date {
+
+    font-family: 'Playfair Display', serif;
+
+    font-size: 65px;
+
+    color: #ffe1eb;
+
+    margin: 12px 0 0;
+
+    text-shadow: 0 0 30px #ff80b2;
+
+    direction: ltr;
+
+}
+
+.time {
+
+    font-size: 19px;
+
+    color: #eeb3cb;
+
+    letter-spacing: 8px;
+
+    direction: ltr;
+
+}
+
+.line {
+
+    width: 65px;
+
+    height: 1px;
+
+    background: #e9a8c0;
+
+    margin: 25px auto;
+
+}
+
+.heart {
+
+    font-size: 48px;
+
+    animation: heartbeat 1.5s infinite;
+
+    filter: drop-shadow(0 0 15px #ff6d9f);
+
+}
+
+@keyframes heartbeat {
+
+    0%,100% {transform:scale(1);}
+
+    50% {transform:scale(1.2);}
+
+}
+
+h1 {
+
+    font-size: 23px;
+
+    color: #ffe4ed;
+
+    margin: 15px 0;
+
+}
+
+.subtitle {
+
+    font-size: 14px;
+
+    color: #d9b9c8;
+
+    line-height: 2;
+
+}
+
+button {
+
+    margin-top: 28px;
+
+    padding: 13px 30px;
+
+    border: 1px solid #ffd1e1;
+
+    border-radius: 30px;
+
+    color: #532238;
+
+    background: linear-gradient(135deg,#ffe2ec,#eaa4c0);
+
+    font-family: 'Cairo';
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: .3s;
+
+}
+
+button:hover {
+
+    transform: scale(1.08);
+
+    box-shadow: 0 0 25px #ff8eb8;
+
+}
+
+.message {
+
+    display: none;
+
+    margin-top: 25px;
+
+    padding: 20px 15px;
+
+    border-top: 1px solid #d99ab5;
+
+    animation: appear 1s ease;
+
+}
+
+.message p {
+
+    font-size: 15px;
+
+    line-height: 2.3;
+
+    color: #ffe2ed;
+
+}
+
+.signature {
+
+    margin-top: 18px;
+
+    color: #f5a9c6;
+
+    font-family: 'Playfair Display';
+
+    font-size: 21px;
+
+    direction: ltr;
+
+}
+
+footer {
+
+    margin-top: 28px;
+
+    color: #b98ba2;
+
+    font-size: 11px;
+
+    direction: ltr;
+
+}
+
+.floating {
+
+    position: fixed;
+
+    bottom: -30px;
+
+    animation: floatUp 7s linear forwards;
+
+    pointer-events: none;
+
+    z-index: 5;
+
+}
+
+@keyframes floatUp {
+
+    to {
+
+        transform: translateY(-110vh) rotate(360deg);
+
+        opacity: 0;
+
+    }
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="stars" id="stars"></div>
+
+<div class="card">
+
+    <div class="small">A DAY TO REMEMBER</div>
+
+    <div class="date">11 / 11</div>
+
+    <div class="time">11 : 11</div>
+
+    <div class="line"></div>
+
+    <div class="heart">♡</div>
+
+    <h1>في يوم يشبه الأمنيات.. اخترتك ❤️</h1>
+
+    <p class="subtitle">
+
+        بعض التواريخ تمر علينا،<br>
+
+        وبعضها يصبح ذكرى لا تشبه أي يوم آخر.
+
+    </p>
+
+    <button onclick="openMessage()">
+
+        افتح رسالتك يا حبيبي ♡
+
+    </button>
+
+    <div class="message" id="message">
+
+        <p>
+
+            في 11/11، وفي هذه اللحظة الجميلة،
+
+            حبيت أقول لك إن وجودك في حياتي
+
+            من الأشياء اللي أحمد الله عليها.
+
+            <br><br>
+
+            ما أبغى من الأيام تاريخًا مميزًا فقط،
+
+            أبغى كل أيامي معك تكون مميزة.
+
+            <br><br>
+
+            أتمنى أن تجمعنا الأيام على خير،
+
+            وأن تكون كل أمنياتي القادمة
+
+            بداية لحياة جميلة تجمعني بك.
+
+            <br><br>
+
+            ولو كان لي أمنية في 11:11،
+
+            فستكون أنت، اليوم وغدًا وكل يوم. ❤️
+
+        </p>
+
+        <div class="signature">
+
+            With all my love ♡
+
+        </div>
+
+    </div>
+
+    <footer>
+
+        11.11.2026 — A LITTLE PIECE OF MY HEART
+
+    </footer>
+
+</div>
+
+<script>
+
+// Create stars
+
+for(let i=0; i<65; i++){
+
+    let star = document.createElement("span");
+
+    star.className = "star";
+
+    star.innerHTML = "✦";
+
+    star.style.left = Math.random()*100+"%";
+
+    star.style.top = Math.random()*100+"%";
+
+    star.style.fontSize = (Math.random()*12+5)+"px";
+
+    star.style.animationDelay = Math.random()*3+"s";
+
+    document.getElementById("stars").appendChild(star);
+
+}
+
+// Open love letter
+
+function openMessage(){
+
+    let msg = document.getElementById("message");
+
+    msg.style.display = "block";
+
+    document.querySelector("button").innerHTML =
+
+    "أحبك أكثر مما تتخيل ♡";
+
+    for(let i=0; i<25; i++){
+
+        setTimeout(createHeart, i*100);
+
+    }
+
+}
+
+// Floating hearts
+
+function createHeart(){
+
+    let heart = document.createElement("div");
+
+    heart.className = "floating";
+
+    heart.innerHTML = ["♡","♥","✧","💕"][Math.floor(Math.random()*4)];
+
+    heart.style.left = Math.random()*100+"%";
+
+    heart.style.fontSize = (Math.random()*20+15)+"px";
+
+    heart.style.color = "#ffb5d0";
+
+    document.body.appendChild(heart);
+
+    setTimeout(()=>heart.remove(),7000);
+
+}
+
+setInterval(createHeart, 900);
+
+</script>
+
+</body>
+
+</html>
